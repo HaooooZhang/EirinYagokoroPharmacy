@@ -1,0 +1,13 @@
+{
+  "effect.yagokoropharmacy.undead_effect": "Undead",
+  "item.minecraft.potion.effect.hourai_potion": "Potion of Hourai",
+  "item.minecraft.splash_potion.effect.hourai_potion": "Splash Potion of Hourai",
+  "item.minecraft.lingering_potion.effect.hourai_potion": "Lingering Potion of Hourai",
+
+  "effect.yagokoropharmacy.ulramarine_effect": "Ulramarine",
+  "item.minecraft.potion.effect.ulramarine_potion": "Potion of Ulramarine",
+  "item.minecraft.splash_potion.effect.ulramarine_potion": "Splash Potion of Ulramarine",
+  "item.minecraft.lingering_potion.effect.ulramarine_potion": "Lingering Potion of Ulramarine",
+
+  "item.yagokoropharmacy.flesh": "flesh"
+}

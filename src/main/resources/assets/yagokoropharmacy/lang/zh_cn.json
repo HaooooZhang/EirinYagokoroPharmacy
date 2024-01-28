@@ -1,0 +1,13 @@
+{
+  "effect.yagokoropharmacy.undead_effect": "不死",
+  "item.minecraft.potion.effect.hourai_potion": "蓬莱之药",
+  "item.minecraft.splash_potion.effect.hourai_potion": "喷溅型蓬莱之药",
+  "item.minecraft.lingering_potion.effect.hourai_potion": "滞留型蓬莱之药",
+
+  "effect.yagokoropharmacy.ulramarine_effect": "完美无缺",
+  "item.minecraft.potion.effect.ulramarine_potion": "绀珠之药",
+  "item.minecraft.splash_potion.effect.ulramarine_potion": "喷溅型绀珠之药",
+  "item.minecraft.lingering_potion.effect.ulramarine_potion": "滞留型绀珠之药",
+
+  "item.yagokoropharmacy.flesh": "血肉"
+}
