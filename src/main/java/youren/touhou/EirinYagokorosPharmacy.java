@@ -20,6 +20,9 @@ import youren.touhou.effect.EffectUndead;
 import youren.touhou.event.ArrowHitSelfEvent;
 import youren.touhou.recipes.PotionRecipe;
 
+import java.util.HashMap;
+import java.util.UUID;
+
 import static youren.touhou.event.DeathEvent.onPlayerDeath;
 import static youren.touhou.event.EventUltramarineDeath.onPlayerDeathB;
 
@@ -32,6 +35,7 @@ public class EirinYagokorosPharmacy implements ModInitializer {
     public static final Potion ULTRAMARINE_POTION = new Potion("ultramarine_potion", new StatusEffectInstance(ULTRAMARINE_EFFECT, 4800));
     public static final Potion RESUMPTION_POTION = new Potion("resumption_potion", new StatusEffectInstance(RESUMPTION_EFFECT, 200));
     public static final Item ITEM_FLESH = new Item(new FabricItemSettings().maxCount(1));
+    private final HashMap<UUID, Boolean> undeadPlayers = new HashMap<>();
 
     @Override
     public void onInitialize() {
@@ -61,15 +65,18 @@ public class EirinYagokorosPharmacy implements ModInitializer {
             return true;
         });
 
-        ServerTickEvents.END_SERVER_TICK.register(server -> {
-            for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
-                boolean isUndead = player.hasStatusEffect(EirinYagokorosPharmacy.UNDEAD_EFFECT);
+        ServerTickEvents.END_SERVER_TICK.register(server -> server.getPlayerManager().getPlayerList().forEach(EirinYagokorosPharmacy.this::handlePlayerEffect));
+  }
 
-                if (isUndead && !player.hasStatusEffect(EirinYagokorosPharmacy.UNDEAD_EFFECT)) {
-                    player.addStatusEffect(new StatusEffectInstance(EirinYagokorosPharmacy.UNDEAD_EFFECT, Integer.MAX_VALUE));
-                }
-            }
-        });
+  private void handlePlayerEffect(ServerPlayerEntity player) {
+    boolean hasUndeadEffect = player.hasStatusEffect(EirinYagokorosPharmacy.UNDEAD_EFFECT);
+    UUID playerUUID = player.getUuid();
 
+    if (hasUndeadEffect) {
+      undeadPlayers.put(playerUUID, true);
+    } else if (undeadPlayers.getOrDefault(playerUUID, false)) {
+      player.addStatusEffect(new StatusEffectInstance(EirinYagokorosPharmacy.UNDEAD_EFFECT, 200, 0));
+      undeadPlayers.put(playerUUID, false);
+    }
     }
 }

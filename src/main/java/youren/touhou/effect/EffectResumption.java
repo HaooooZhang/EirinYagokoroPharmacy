@@ -27,10 +27,8 @@ public class EffectResumption extends StatusEffect {
         potionUseCount.putIfAbsent(playerID, 0);
         potionUseCount.put(playerID, potionUseCount.get(playerID) + 1);
             if (potionUseCount.get(playerID) == 3) {
-                //entity.damage(DamageSource.,50.0F);
+                entity.kill();
                 entity.clearStatusEffects();
-                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 2000, 1));
-                entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 2000, 1));
                 potionUseCount.put(playerID, 0); // 重置计数
             }
             entity.heal(10);
