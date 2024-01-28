@@ -3,7 +3,6 @@ package youren.touhou.effect;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 public class EffectUltramarine extends StatusEffect {
@@ -19,15 +18,14 @@ public class EffectUltramarine extends StatusEffect {
             }
 
             if (entity.getHealth() < entity.getMaxHealth()) {
-                entity.heal(0.5F);
+                entity.heal((float) (0.2));
             }
-
-            entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 4800, 1)); // 4分钟的幸运效果
         }
     }
 
+
     @Override
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        return false; //
+        return true; //
     }
 }
