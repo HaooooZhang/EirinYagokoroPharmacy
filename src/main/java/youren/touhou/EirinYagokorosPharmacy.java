@@ -18,6 +18,7 @@ import youren.touhou.effect.EffectResumption;
 import youren.touhou.effect.EffectUltramarine;
 import youren.touhou.effect.EffectUndead;
 import youren.touhou.event.ArrowHitSelfEvent;
+import youren.touhou.recipes.PotionRecipe;
 
 import static youren.touhou.event.DeathEvent.onPlayerDeath;
 import static youren.touhou.event.EventUltramarineDeath.onPlayerDeathB;
@@ -43,6 +44,7 @@ public class EirinYagokorosPharmacy implements ModInitializer {
         Registry.register(Registries.POTION, new Identifier("yagokoropharmacy", "resumption_effect"), RESUMPTION_POTION);
         Registry.register(Registries.ITEM, new Identifier("yagokoropharmacy", "flesh"), ITEM_FLESH);
         ArrowHitSelfEvent.register();
+        PotionRecipe.registerPotions();
 
 
         ServerLivingEntityEvents.ALLOW_DEATH.register((entity, damageSource, damageAmount) -> {
