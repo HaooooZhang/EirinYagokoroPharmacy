@@ -1,20 +1,13 @@
 package youren.touhou.effect;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageType;
-import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.registry.entry.RegistryEntry;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.UUID;
-
-import static net.minecraft.entity.damage.DamageTypes.MAGIC;
 
 public class EffectResumption extends StatusEffect {
     public EffectResumption() {
