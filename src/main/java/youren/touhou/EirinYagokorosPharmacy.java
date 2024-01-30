@@ -31,7 +31,7 @@ public class EirinYagokorosPharmacy implements ModInitializer {
     public static final StatusEffect UNDEAD_EFFECT = new EffectUndead();
     public static final StatusEffect ULTRAMARINE_EFFECT = new EffectUltramarine();
     public static final StatusEffect RESUMPTION_EFFECT = new EffectResumption();
-    public static final Potion HOURAI_POTION = new Potion("hourai_potion", new StatusEffectInstance(UNDEAD_EFFECT, Integer.MAX_VALUE));
+    public static final Potion HOURAI_POTION = new Potion("hourai_potion", new StatusEffectInstance(UNDEAD_EFFECT, -1));
     public static final Potion ULTRAMARINE_POTION = new Potion("ultramarine_potion", new StatusEffectInstance(ULTRAMARINE_EFFECT, 4800));
     public static final Potion RESUMPTION_POTION = new Potion("resumption_potion", new StatusEffectInstance(RESUMPTION_EFFECT, 200));
     public static final Item ITEM_FLESH = new Item(new FabricItemSettings().maxCount(1));
@@ -75,7 +75,7 @@ public class EirinYagokorosPharmacy implements ModInitializer {
     if (hasUndeadEffect) {
       undeadPlayers.put(playerUUID, true);
     } else if (undeadPlayers.getOrDefault(playerUUID, false)) {
-      player.addStatusEffect(new StatusEffectInstance(EirinYagokorosPharmacy.UNDEAD_EFFECT, 200, 0));
+      player.addStatusEffect(new StatusEffectInstance(EirinYagokorosPharmacy.UNDEAD_EFFECT, -1, 0));
       undeadPlayers.put(playerUUID, false);
     }
     }
