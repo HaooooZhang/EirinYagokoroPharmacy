@@ -78,5 +78,5 @@ public class EirinYagokorosPharmacy implements ModInitializer {
       player.addStatusEffect(new StatusEffectInstance(EirinYagokorosPharmacy.UNDEAD_EFFECT, -1, 0));
       undeadPlayers.put(playerUUID, false);
     }
-    }
+  }
 }

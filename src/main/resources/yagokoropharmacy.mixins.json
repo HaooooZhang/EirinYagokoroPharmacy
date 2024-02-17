@@ -3,8 +3,7 @@
   "package": "youren.touhou.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "BrewingRecipeRegistryMixin",
-    "ExampleMixin"
+    "BrewingRecipeRegistryMixin"
   ],
   "injectors": {
     "defaultRequire": 1
