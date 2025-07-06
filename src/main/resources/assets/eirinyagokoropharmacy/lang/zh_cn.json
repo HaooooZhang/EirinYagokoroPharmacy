@@ -1,0 +1,13 @@
+{
+  "itemGroup.eirinyagokoropharmacy": "Example Mod Tab",
+  "block.eirinyagokoropharmacy.example_block": "Example Block",
+  "item.eirinyagokoropharmacy.example_item": "Example Item",
+
+  "eirinyagokoropharmacy.configuration.title": "EirinYagokoroPharmacy Configs",
+  "eirinyagokoropharmacy.configuration.section.eirinyagokoropharmacy.common.toml": "EirinYagokoroPharmacy Configs",
+  "eirinyagokoropharmacy.configuration.section.eirinyagokoropharmacy.common.toml.title": "EirinYagokoroPharmacy Configs",
+  "eirinyagokoropharmacy.configuration.items": "Item List",
+  "eirinyagokoropharmacy.configuration.logDirtBlock": "Log Dirt Block",
+  "eirinyagokoropharmacy.configuration.magicNumberIntroduction": "Magic Number Text",
+  "eirinyagokoropharmacy.configuration.magicNumber": "Magic Number"
+}
