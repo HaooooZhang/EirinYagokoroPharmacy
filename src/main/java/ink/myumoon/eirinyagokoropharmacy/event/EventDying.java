@@ -22,6 +22,7 @@ public class EventDying {
                  player.setHealth(2.0F);
                  player.addEffect(new MobEffectInstance(MobEffects.REGENERATION,1200,1));
                  player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,1200,1));
+                 player.addEffect(new MobEffectInstance(MobEffects.HUNGER,400));
                  player.level().playSound(null,player.blockPosition(),SoundEvents.TOTEM_USE, SoundSource.PLAYERS,1.0F,1.0F);
             }
         }

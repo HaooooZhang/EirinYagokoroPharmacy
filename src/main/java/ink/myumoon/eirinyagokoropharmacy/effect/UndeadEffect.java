@@ -20,7 +20,6 @@ public class UndeadEffect extends MobEffect {
             entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION,200,1));
             entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,200,1));
         }
-
         entity.getPersistentData().putBoolean("IsUndead",true);
         return true;
     }

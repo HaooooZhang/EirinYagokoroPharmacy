@@ -1,8 +1,12 @@
 package ink.myumoon.eirinyagokoropharmacy;
 
+import ink.myumoon.eirinyagokoropharmacy.effect.UltramarineEffect;
 import ink.myumoon.eirinyagokoropharmacy.effect.UndeadEffect;
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.item.alchemy.Potion;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,11 +45,13 @@ public class EirinYagokoroPharmacy {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(Registries.MOB_EFFECT,MODID);
+    public static final DeferredRegister<Potion> POTIONS =DeferredRegister.create(Registries.POTION,MODID);
 
-    public static final DeferredHolder<MobEffect, UndeadEffect> UNDEAD_EFFECT = MOB_EFFECTS.register("undead_effect",()-> new UndeadEffect(
-            MobEffectCategory.NEUTRAL,
-            0x98D982
-    ));
+    public static final DeferredHolder<MobEffect, UndeadEffect> UNDEAD_EFFECT = MOB_EFFECTS.register("undead_effect",()-> new UndeadEffect(MobEffectCategory.NEUTRAL, 0x98D982));
+    public static final DeferredHolder<MobEffect, UltramarineEffect> ULTRAMARINE_EFFECT = MOB_EFFECTS.register("ultramarine_effect",() -> new UltramarineEffect(MobEffectCategory.BENEFICIAL,0xA22633));
+
+    public static final Holder<Potion> HOURAI_POTION = POTIONS.register("hourai_potion", () -> new Potion((new MobEffectInstance(UNDEAD_EFFECT,-1))));
+    public static final Holder<Potion> ULTRAMARINE_POTION =POTIONS.register("ultramarine_potion",() -> new Potion((new MobEffectInstance(ULTRAMARINE_EFFECT,6000))));
 
     public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
     public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
@@ -68,6 +74,7 @@ public class EirinYagokoroPharmacy {
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
         MOB_EFFECTS.register(modEventBus);
+        POTIONS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (EirinYagokoroPharmacy) to respond directly to events.
