@@ -1,5 +1,6 @@
 package ink.myumoon.eirinyagokoropharmacy;
 
+import ink.myumoon.eirinyagokoropharmacy.effect.ResumptionEffect;
 import ink.myumoon.eirinyagokoropharmacy.effect.UltramarineEffect;
 import ink.myumoon.eirinyagokoropharmacy.effect.UndeadEffect;
 import net.minecraft.core.Holder;
@@ -49,9 +50,14 @@ public class EirinYagokoroPharmacy {
 
     public static final DeferredHolder<MobEffect, UndeadEffect> UNDEAD_EFFECT = MOB_EFFECTS.register("undead_effect",()-> new UndeadEffect(MobEffectCategory.NEUTRAL, 0x98D982));
     public static final DeferredHolder<MobEffect, UltramarineEffect> ULTRAMARINE_EFFECT = MOB_EFFECTS.register("ultramarine_effect",() -> new UltramarineEffect(MobEffectCategory.BENEFICIAL,0xA22633));
+    public static final DeferredHolder<MobEffect, ResumptionEffect> RESUMPTION_EFFECT = MOB_EFFECTS.register("resumption_effect" ,() ->new ResumptionEffect(MobEffectCategory.BENEFICIAL,0x63C74D));
 
     public static final Holder<Potion> HOURAI_POTION = POTIONS.register("hourai_potion", () -> new Potion((new MobEffectInstance(UNDEAD_EFFECT,-1))));
-    public static final Holder<Potion> ULTRAMARINE_POTION =POTIONS.register("ultramarine_potion",() -> new Potion((new MobEffectInstance(ULTRAMARINE_EFFECT,6000))));
+    public static final Holder<Potion> ULTRAMARINE_POTION = POTIONS.register("ultramarine_potion",() -> new Potion((new MobEffectInstance(ULTRAMARINE_EFFECT,6000))));
+    public static final Holder<Potion> RESUMPTION_POTION = POTIONS.register("resumption_potion",() -> new Potion((new MobEffectInstance(RESUMPTION_EFFECT,200))));
+
+    public static final DeferredItem<Item> ITEM_FLESH = ITEMS.registerSimpleItem("flesh", new Item.Properties().food(new FoodProperties.Builder()
+            .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
 
     public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
     public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
@@ -102,8 +108,8 @@ public class EirinYagokoroPharmacy {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ITEM_FLESH);
         }
     }
 
