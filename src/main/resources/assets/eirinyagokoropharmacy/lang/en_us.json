@@ -9,5 +9,22 @@
   "eirinyagokoropharmacy.configuration.items": "Item List",
   "eirinyagokoropharmacy.configuration.logDirtBlock": "Log Dirt Block",
   "eirinyagokoropharmacy.configuration.magicNumberIntroduction": "Magic Number Text",
-  "eirinyagokoropharmacy.configuration.magicNumber": "Magic Number"
+  "eirinyagokoropharmacy.configuration.magicNumber": "Magic Number",
+
+  "effect.yagokoropharmacy.undead_effect": "Undead",
+  "item.minecraft.potion.effect.hourai_potion": "Potion of Hourai",
+  "item.minecraft.splash_potion.effect.hourai_potion": "Splash Potion of Hourai",
+  "item.minecraft.lingering_potion.effect.hourai_potion": "Lingering Potion of Hourai",
+
+  "effect.yagokoropharmacy.ultramarine_effect": "Ulramarine",
+  "item.minecraft.potion.effect.ultramarine_potion": "Potion of Ulramarine",
+  "item.minecraft.splash_potion.effect.ultramarine_potion": "Splash Potion of Ulramarine",
+  "item.minecraft.lingering_potion.effect.ultramarine_potion": "Lingering Potion of Ulramarine",
+
+  "effect.yagokoropharmacy.resumption_effect": "Unrivaled",
+  "item.minecraft.potion.effect.resumption_potion": "Potion of Unrivaled",
+  "item.minecraft.splash_potion.effect.resumption_potion": "Splash Potion of Unrivaled",
+  "item.minecraft.lingering_potion.effect.resumption_potion": "Lingering Potion of Unrivaled",
+
+  "item.yagokoropharmacy.flesh": "flesh"
 }
