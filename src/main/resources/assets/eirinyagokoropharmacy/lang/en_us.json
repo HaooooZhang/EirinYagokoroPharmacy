@@ -1,30 +1,21 @@
 {
-  "itemGroup.eirinyagokoropharmacy": "Example Mod Tab",
-  "block.eirinyagokoropharmacy.example_block": "Example Block",
-  "item.eirinyagokoropharmacy.example_item": "Example Item",
-
-  "eirinyagokoropharmacy.configuration.title": "EirinYagokoroPharmacy Configs",
-  "eirinyagokoropharmacy.configuration.section.eirinyagokoropharmacy.common.toml": "EirinYagokoroPharmacy Configs",
-  "eirinyagokoropharmacy.configuration.section.eirinyagokoropharmacy.common.toml.title": "EirinYagokoroPharmacy Configs",
-  "eirinyagokoropharmacy.configuration.items": "Item List",
-  "eirinyagokoropharmacy.configuration.logDirtBlock": "Log Dirt Block",
-  "eirinyagokoropharmacy.configuration.magicNumberIntroduction": "Magic Number Text",
-  "eirinyagokoropharmacy.configuration.magicNumber": "Magic Number",
-
-  "effect.yagokoropharmacy.undead_effect": "Undead",
+  "effect.eirinyagokoropharmacy.undead_effect": "Undead",
   "item.minecraft.potion.effect.hourai_potion": "Potion of Hourai",
   "item.minecraft.splash_potion.effect.hourai_potion": "Splash Potion of Hourai",
   "item.minecraft.lingering_potion.effect.hourai_potion": "Lingering Potion of Hourai",
+  "item.minecraft.tipped_arrow.effect.hourai_potion":"Arrow of Undead",
 
-  "effect.yagokoropharmacy.ultramarine_effect": "Ulramarine",
+  "effect.eirinyagokoropharmacy.ultramarine_effect": "Ulramarine",
   "item.minecraft.potion.effect.ultramarine_potion": "Potion of Ulramarine",
   "item.minecraft.splash_potion.effect.ultramarine_potion": "Splash Potion of Ulramarine",
   "item.minecraft.lingering_potion.effect.ultramarine_potion": "Lingering Potion of Ulramarine",
+  "item.minecraft.tipped_arrow.effect.ultramarine_potion":"Arrow of Ulramarine",
 
-  "effect.yagokoropharmacy.resumption_effect": "Unrivaled",
+  "effect.eirinyagokoropharmacy.resumption_effect": "Unrivaled",
   "item.minecraft.potion.effect.resumption_potion": "Potion of Unrivaled",
   "item.minecraft.splash_potion.effect.resumption_potion": "Splash Potion of Unrivaled",
   "item.minecraft.lingering_potion.effect.resumption_potion": "Lingering Potion of Unrivaled",
+  "item.minecraft.tipped_arrow.effect.resumption_potion":"Arrow of Unrivaled",
 
-  "item.yagokoropharmacy.flesh": "flesh"
+  "item.eirinyagokoropharmacy.flesh": "flesh"
 }

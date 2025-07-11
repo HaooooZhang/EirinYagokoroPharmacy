@@ -25,7 +25,7 @@ public class EirinYagokoroPharmacyClient {
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         // Some client setup code
-        EirinYagokoroPharmacy.LOGGER.info("HELLO FROM CLIENT SETUP");
-        EirinYagokoroPharmacy.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+//        EirinYagokoroPharmacy.LOGGER.info("HELLO FROM CLIENT SETUP");
+//        EirinYagokoroPharmacy.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
 }
